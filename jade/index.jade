@@ -11,9 +11,14 @@ html
     script(src='js/main_controller.js')
   body(ng-app='chromagic', ng-controller='MainCtrl')
     ion-pane
-      ion-header-bar.bar-stable
-        h1.title Ionic Blank Starter
       ion-content
-        .row
-          
-          canvas#canvas
+        .row#start
+          .col
+            h1.title Chromagic
+            button.button(ng-click='start()') Play!
+        .row#game
+          .col
+            canvas#canvas
+        .row#end
+          .col
+            //- Enter game over splat & text here
