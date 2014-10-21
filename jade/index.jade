@@ -4,21 +4,45 @@ html
     meta(charset='utf-8')
     meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width')
     title
+    //- Vendor stylesheet
     link(href='css/ionic.app.css', rel='stylesheet')
+    //- App-specific stylesheet
+    link(href='css/style.css', rel='stylesheet')
+    //- Vendor scripts
     script(src='lib/ionic/js/ionic.bundle.js')
     script(src='cordova.js')
+    //- App-specific scripts
     script(src='js/app.js')
+    script(src='js/asset.js')
+    script(src='js/bar.js')
+    script(src='js/drop.js')
+    script(src='js/game.js')
     script(src='js/main_controller.js')
   body(ng-app='chromagic', ng-controller='MainCtrl')
     ion-pane
       ion-content
-        .row#start
-          .col
-            h1.title Chromagic
-            button.button(ng-click='start()') Play!
-        .row#game
-          .col
-            canvas#canvas
-        .row#end
-          .col
-            //- Enter game over splat & text here
+        //- Add ng-show/-hide logic to divs
+        #start(ng-show='')
+          .row
+            .col
+              h1.title Chromagic
+              button.button(ng-click='start()') Play!
+        #game(ng-show='')
+          .row
+            .col
+              canvas#canvas
+        #end(ng-show='')
+          .row
+            .col
+              h1.title Game Over!
+          .row
+            .col
+              h3 {{game.score}} points
+            .col
+              h3 Level {{game.level}}
+          .row
+            .col
+              //- social buttons go here
+            .col
+              button.button(ng-click='done()') Done
+              //- Enter game over splat & text here
