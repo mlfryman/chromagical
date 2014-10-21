@@ -8,8 +8,12 @@ html
     script(src='lib/ionic/js/ionic.bundle.js')
     script(src='cordova.js')
     script(src='js/app.js')
-  body(ng-app='chromagic')
+    script(src='js/main_controller.js')
+  body(ng-app='chromagic', ng-controller='MainCtrl')
     ion-pane
       ion-header-bar.bar-stable
         h1.title Ionic Blank Starter
       ion-content
+        .row
+          
+          canvas#canvas
