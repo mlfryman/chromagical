@@ -22,7 +22,7 @@ html
     ion-pane
       ion-content
         //- Add ng-show/-hide logic to divs
-        #start(ng-show='')
+        #start
           .row
             .col
               h1.title Chromagic
@@ -31,7 +31,7 @@ html
           .row
             .col
               canvas#canvas
-        #end(ng-show='')
+        #end(ng-hide='')
           .row
             .col
               h1.title Game Over!
