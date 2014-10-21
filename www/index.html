@@ -18,7 +18,7 @@
   <body ng-app="chromagic" ng-controller="MainCtrl">
     <ion-pane>
       <ion-content>
-        <div id="start" data-ng-show="">
+        <div id="start">
           <div class="row">
             <div class="col">
               <h1 class="title">Chromagic</h1>
@@ -28,14 +28,19 @@
             <button ng-click="start()" class="button icon-right ion-wand button-balanced">Work your magic!</button>
           </div>
         </div>
-        <div id="game" data-ng-show="">
+        <div id="game">
+          <div class="row">
+            <div class="col">
+              <CANVAS>PLACEHOLDER</CANVAS>
+            </div>
+          </div>
           <div class="row">
             <div class="col">
               <canvas id="canvas"></canvas>
             </div>
           </div>
         </div>
-        <div id="levelup" data-ng-show="">
+        <div id="levelup">
           <div class="row">
             <div class="col">
               <h1 class="title">Level # {{game.currentLevel}} Complete!</h1>
@@ -43,7 +48,7 @@
             </div>
           </div>
         </div>
-        <div id="end" data-ng-show="">
+        <div id="end">
           <div class="row">
             <div class="col">
               <h1 class="title">Game Over!</h1>
