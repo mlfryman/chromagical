@@ -22,28 +22,37 @@ html
     ion-pane
       ion-content
         //- Add ng-show/-hide logic to divs
-        #start
+        #start(data-ng-show='')
           .row
             .col
-              h1.title Chromagic &nbsp;
-                i.icon.ion-wand
-              button.button.icon-right.ion-waterdrop.button-large.button-balanced(ng-click='start()') Work your magic! &nbsp;
-        #game(ng-show='')
+              h1.title Chromagic
+          .row
+              //- center this button!
+              button.button.icon-right.ion-wand.button-balanced(ng-click='start()') Work your magic!
+        #game(data-ng-show='')
           .row
             .col
               canvas#canvas
-        #end(ng-hide='')
+        #levelup(data-ng-show='')
+          .row
+            .col
+              h1.title Level # {{game.currentLevel}} Complete!
+              //- insert trophy badge here
+              h1#trophy.i.icon.ion-trophy
+              //- img(href='')
+              //- button.button.icon-right.ion-play.button-large.button-balanced(ng-click='nextLevel()') Continue &nbsp;
+        #end(data-ng-show='')
+          //- Enter "game over" splat & text here
           .row
             .col
               h1.title Game Over!
           .row
             .col
-              h3 {{game.score}} points
+              h3 Level # {{game.currentLevel}}
             .col
-              h3 Level {{game.level}}
+              h3 # {{game.score}} points
           .row
             .col
-              //- social buttons go here
+              //- social buttons will go here
             .col
               button.button.icon-left.ion-checkmark.button-small.button-positive(ng-click='done()') &nbsp; Done
-              //- Enter game over splat & text here
