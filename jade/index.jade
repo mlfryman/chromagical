@@ -25,8 +25,9 @@ html
         #start
           .row
             .col
-              h1.title Chromagic
-              button.button(ng-click='start()') Play!
+              h1.title Chromagic &nbsp;
+                i.icon.ion-wand
+              button.button.icon-right.ion-waterdrop.button-large.button-balanced(ng-click='start()') Work your magic! &nbsp;
         #game(ng-show='')
           .row
             .col
@@ -44,5 +45,5 @@ html
             .col
               //- social buttons go here
             .col
-              button.button(ng-click='done()') Done
+              button.button.icon-left.ion-checkmark.button-small.button-positive(ng-click='done()') &nbsp; Done
               //- Enter game over splat & text here

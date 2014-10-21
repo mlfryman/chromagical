@@ -1,1 +1,9 @@
-/* Empty. Add your own CSS if you like */
+@import url(http://fonts.googleapis.com/css?family=Questrial|Wendy+One);
+
+.title {
+  font-family: 'Wendy One', sans-serif;
+}
+
+body {
+  font-family: 'Questrial', sans-serif;
+}
