@@ -15,7 +15,7 @@
     <script src="js/game.js"></script>
     <script src="js/main_controller.js"></script>
   </head>
-  <body ng-app="chromagic" ng-controller="MainCtrl">
+  <body data-ng-app="chromagic" data-ng-controller="MainCtrl">
     <ion-pane>
       <ion-content>
         <div id="start">
@@ -25,18 +25,29 @@
             </div>
           </div>
           <div class="row">
-            <button ng-click="start()" class="button icon-right ion-wand button-balanced">Work your magic!</button>
+            <div class="col col-25"></div>
+            <div class="col col-50">
+              <button ng-click="start()" class="button icon-right ion-wand button-balanced">Work your magic!</button>
+            </div>
+            <div class="col col-25"></div>
           </div>
         </div>
         <div id="game">
           <div class="row">
-            <div class="col">
-              <CANVAS>PLACEHOLDER</CANVAS>
+            <div class="col col-10">
+              <button class="button button-full red"></button>
+              <button class="button button-full purple"></button>
+              <button class="button button-full blue"></button>
             </div>
-          </div>
-          <div class="row">
             <div class="col">
-              <canvas id="canvas"></canvas>
+              <canvas id="canvas">
+                <h6>this is the canvas area</h6>
+              </canvas>
+            </div>
+            <div class="col col-10">
+              <button class="button button-full green"></button>
+              <button class="button button-full yellow"></button>
+              <button class="button button-full orange"></button>
             </div>
           </div>
         </div>
@@ -64,6 +75,7 @@
           </div>
           <div class="row">
             <div class="col">
+              <share>buttons</share>
             </div>
             <div class="col">
               <button ng-click="done()" class="button icon-left ion-checkmark button-small button-positive">&nbsp; Done</button>

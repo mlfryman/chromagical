@@ -1,0 +1,21 @@
+//- NOTE: hide/show & onHold references are commented out until we integrate those functions
+#game
+  //- .ng-hide(ng-show='game')
+  .row
+    .col.col-10
+      button.button.button-full.red
+      //- (on-hold='red()')
+      button.button.button-full.purple
+      //- (data-tap-disabled='true'; on-hold='purple()')
+      button.button.button-full.blue
+      //- (on-hold='blue()')
+    .col
+      canvas#canvas
+        h6 this is the canvas area
+    .col.col-10
+      button.button.button-full.green
+      //- (data-tap-disabled='true'; on-hold='green()')
+      button.button.button-full.yellow
+      //- (on-hold='yellow()')
+      button.button.button-full.orange
+      //- (data-tap-disabled='true'; on-hold='orange()')

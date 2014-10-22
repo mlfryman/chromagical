@@ -8,6 +8,67 @@ body {
   font-family: 'Questrial', sans-serif;
 }
 
-h1 {
+h1, h3 {
   text-align: center;
+}
+
+.red {
+  background-color: #ff0000;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+}
+.yellow {
+  background-color: #ffff00;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+}
+.blue {
+  background-color: #0033ff;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+}
+.orange {
+  background-color: #ff9900;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+}
+.purple {
+  background-color: #990099;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+}
+.green {
+  background-color: #009900;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+}
+.red-orange {
+  background-color: #ff6600;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+}
+.yellow-orange {
+  background-color: #ffcc00;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+}
+.red-purple {
+  background-color: #cc0099;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+}
+.yellow-green {
+  background-color: #66cc00;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
 }

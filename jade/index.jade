@@ -18,44 +18,12 @@ html
     script(src='js/drop.js')
     script(src='js/game.js')
     script(src='js/main_controller.js')
-  body(ng-app='chromagic', ng-controller='MainCtrl')
+  body(data-ng-app='chromagic', data-ng-controller='MainCtrl')
     ion-pane
       ion-content
-        //- Add ng-show/-hide logic to divs
-        #start
-          .row
-            .col
-              h1.title Chromagic
-          .row
-              //- center this button!
-              button.button.icon-right.ion-wand.button-balanced(ng-click='start()') Work your magic!
-        #game
-          .row
-            .col
-              CANVAS PLACEHOLDER
-          .row
-            .col
-              canvas#canvas
-        #levelup
-          .row
-            .col
-              h1.title Level # {{game.currentLevel}} Complete!
-              //- insert trophy badge here
-              h1#trophy.i.icon.ion-trophy
-              //- img(href='')
-              //- button.button.icon-right.ion-play.button-large.button-balanced(ng-click='nextLevel()') Continue &nbsp;
-        #end
-          //- Enter "game over" splat & text here
-          .row
-            .col
-              h1.title Game Over!
-          .row
-            .col
-              h3 Level # {{game.currentLevel}}
-            .col
-              h3 # {{game.score}} points
-          .row
-            .col
-              //- social buttons will go here
-            .col
-              button.button.icon-left.ion-checkmark.button-small.button-positive(ng-click='done()') &nbsp; Done
+        //- Add ng-show/-hide OR ng-if logic to divs
+        //- when using ng-if, $scope & elements are removed from the DOM completely & redrawn with each partial
+        include start
+        include game
+        include levelUp
+        include end
