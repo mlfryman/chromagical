@@ -7,7 +7,7 @@ var Bar = (function(){
     this.x        = 0;
     this.y        = Math.ceil(game.canvas.height * 0.8);
     this.width    = game.canvas.width;
-    this.height   = Math.floor(game.canvas.height * 0.05);
+    this.height   = Math.floor(game.canvas.height * 0.1);
     this.palette  = game.palette;
     this.colorNum = 0;
     this.color    = this.palette[this.colorNum];
@@ -20,7 +20,7 @@ var Bar = (function(){
 
   Bar.prototype.changeColor = function(num){
     this.colorNum += num;
-    if(Object.keys(this.palette).indexOf(this.colorNum) !== -1){
+    if(Object.keys(this.palette).indexOf(this.colorNum.toString()) !== -1){
       this.color = this.palette[this.colorNum];
     }else{
       this.color = this.palette['0'];

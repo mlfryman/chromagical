@@ -1,17 +1,14 @@
 /* exported Game */
-/* global Asset, Bloop, Splat, Drop, Bar */
-
+/* global Asset, Drop, Bar */
+//Bloop, Splat,
 var Game = (function(){
   'use strict';
 
   function Game(){
-    var bodyHeight   = window.innerHeight,
-        headerHeight = document.getElementsByTagName('ion-header-bar')[0].clientHeight;
-
     this.canvas        = document.getElementById('canvas');
     this.ctx           = this.canvas.getContext('2d');
-    this.canvas.height = bodyHeight - headerHeight;
-    this.canvas.width  = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+    this.canvas.width  = Math.floor(window.innerWidth * 0.8);
     this.assets        = Asset.load();
     this.drops         = [];
     this.splats        = [];
@@ -23,10 +20,10 @@ var Game = (function(){
     this.bloopCount    = 0;
     this.currentLevel  = 0;
     this.levels        = {
-      0: {gravity:5,  frequency: 500, range: 2,  point: 10},
-      1: {gravity:10, frequency: 400, range: 5,  point: 15},
-      2: {gravity:15, frequency: 300, range: 5,  point: 15},
-      3: {gravity:20, frequency: 200, range: 11, point: 20}
+      0: {gravity:5,  frequency: 3000, range: 2,  point: 10},
+      1: {gravity:10, frequency: 2500, range: 5,  point: 15},
+      2: {gravity:15, frequency: 2000, range: 5,  point: 15},
+      3: {gravity:20, frequency: 1500, range: 11, point: 20}
     };
     this.palette       = {
       5:  '#ff0000', // red
@@ -95,14 +92,14 @@ var Game = (function(){
     if(!this.drops[0]){return;}
 
     if(this.drops[0].hitBar(this)){
-      if('drop color' === 'line color'){
+      if(this.drops[0].color === this.bar.color){
         this.points += this.levels[this.currentLevel].point;
         this.bloopCount += 1;
-        this.bloops.push(new Bloop(this));
+        // this.bloops.push(new Bloop(this));
         this.assets.bloop.play();
       }else{
         this.lives -= 1;
-        this.splats.push(new Splat(this));
+        // this.splats.push(new Splat(this));
         this.assets.splat.play();
       }
       this.drops.shift();

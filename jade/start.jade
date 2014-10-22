@@ -1,5 +1,5 @@
 //- NOTE: hide/show references are commented out until we integrate those functions
-#start
+#start(ng-hide='!showStart')
   //- .ng-show(ng-hide='!gameStart')
   .row
     .col
@@ -8,5 +8,5 @@
     //- need to center this button!
     .col.col-25
     .col.col-50
-      button.button.icon-right.ion-wand.button-balanced(ng-click='start()') Work your magic!
+      button.button.icon-right.ion-wand.button-balanced(ng-click='gameStart(10)') Work your magic!
     .col.col-25
