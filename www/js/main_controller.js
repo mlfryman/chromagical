@@ -37,6 +37,12 @@
       $scope.game.bar.changeColor(num);
     };
 
+    $scope.nextLevel = function(lives, level, score){
+      $scope.showLevel = !$scope.showLevel;
+      $scope.showGame  = !$scope.showGame;
+      $scope.game.start(lives, level, score);
+    };
+
     $scope.done = function(){
       $scope.showStart = !$scope.showStart;
       $scope.showEnd  = !$scope.showEnd;
