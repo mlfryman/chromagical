@@ -8,6 +8,7 @@ var Drop = (function(){
         size  = Math.floor(game.canvas.width * 0.05);
 
     this.img    = game.assets.drops[index];
+    this.color  = game.palette[Object.keys(game.palette)[index]];
     this.width  = size;
     this.height = size;
     this.x      = _.random(0, game.canvas.width - this.width);

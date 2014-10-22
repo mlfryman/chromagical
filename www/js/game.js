@@ -20,10 +20,10 @@ var Game = (function(){
     this.bloopCount    = 0;
     this.currentLevel  = 0;
     this.levels        = {
-      0: {gravity:5,  frequency: 500, range: 2,  point: 10},
-      1: {gravity:10, frequency: 400, range: 5,  point: 15},
-      2: {gravity:15, frequency: 300, range: 5,  point: 15},
-      3: {gravity:20, frequency: 200, range: 11, point: 20}
+      0: {gravity:5,  frequency: 3000, range: 2,  point: 10},
+      1: {gravity:10, frequency: 2500, range: 5,  point: 15},
+      2: {gravity:15, frequency: 2000, range: 5,  point: 15},
+      3: {gravity:20, frequency: 1500, range: 11, point: 20}
     };
     this.palette       = {
       5:  '#ff0000', // red
@@ -92,7 +92,7 @@ var Game = (function(){
     if(!this.drops[0]){return;}
 
     if(this.drops[0].hitBar(this)){
-      if('drop color' === 'line color'){
+      if(this.drops[0].color === this.bar.color){
         this.points += this.levels[this.currentLevel].point;
         this.bloopCount += 1;
         // this.bloops.push(new Bloop(this));

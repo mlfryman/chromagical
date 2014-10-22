@@ -36,5 +36,10 @@
       $scope.game.bar.changeColor(num);
     };
 
+    $scope.done = function(){
+      $scope.showStart = !$scope.showStart;
+      $scope.showEnd  = !$scope.showEnd;
+    };
+
   }]);
 })();
