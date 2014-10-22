@@ -20,7 +20,7 @@ var Drop = (function(){
   };
 
   Drop.prototype.hitBar = function(game){
-    return (this.y + this.height) >= game.bar.y;
+    return (this.y + this.height - 3) >= game.bar.y;
   };
 
   return Drop;
