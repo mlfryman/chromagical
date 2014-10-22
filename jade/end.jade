@@ -1,0 +1,18 @@
+//- NOTE: hide/show references are commented out until we integrate those functions
+#end
+  //- .ng-hide(ng-show='gameOver')
+  //- include "game over" splat here
+  .row
+    .col
+      h1.title Game Over!
+  .row
+    .col
+      h3 Level # {{game.currentLevel}}
+    .col
+      h3 # {{game.score}} points
+  .row
+    .col
+      //- social buttons go here
+      share buttons
+    .col
+      button.button.icon-left.ion-checkmark.button-small.button-positive(ng-click='done()') &nbsp; Done
