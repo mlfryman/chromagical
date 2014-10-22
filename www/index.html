@@ -55,8 +55,12 @@
           <div class="row">
             <div class="col">
               <h1 class="title">Level # {{game.currentLevel}} Complete!</h1>
+<<<<<<< HEAD
               <h1 id="trophy" class="i icon ion-trophy"></h1>
               <button ng-click="nextLevel(10, 1, game.score)" class="button icon-right ion-play button-large button-balanced">Continue &nbsp;</button>
+=======
+              <h1 id="trophy" class="i icon ion-trophy"></h1><img src="img/trophy_200x200.png">
+>>>>>>> 1913f0d3ce582f75a3a45ad716c12ba88ed1994a
             </div>
           </div>
         </div>
@@ -68,20 +72,27 @@
           </div>
           <div class="row">
             <div class="col">
-              <h3>Level # {{game.currentLevel}}</h3>
+              <h3>Level {{game.currentLevel}}</h3>
             </div>
             <div class="col">
-              <h3># {{game.score}} points</h3>
+              <h3>{{game.score}} points</h3>
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <share>buttons</share>
+              <h5 class="title">Share:
+                <ul class="share-buttons">
+                  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2FABarnhard%2Fchromagic&amp;t=I&quot;m%20chromagical!" target="_blank"><img src="img/social/Facebook-32.png"></a></li>
+                  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fgithub.com%2FABarnhard%2Fchromagic&amp;text=I&quot;m%20chromagical!:%20https%3A%2F%2Fgithub.com%2FABarnhard%2Fchromagic&amp;via=chromagic" target="_blank" title="Tweet"><img src="img/social/Twitter-32.png"></a></li>
+                  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fgithub.com%2FABarnhard%2Fchromagic" target="_blank" title="Share on Google+"><img src="img/social/Google-32.png"></a></li>
+                </ul>
+              </h5>
             </div>
             <div class="col">
               <button ng-click="done()" class="button icon-left ion-checkmark button-small button-positive">&nbsp; Done</button>
             </div>
           </div>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5447e4ad416c2d80" async="async"></script>
         </div>
       </ion-content>
     </ion-pane>
