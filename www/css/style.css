@@ -94,3 +94,11 @@ h1, h3 {
   background-color: #66cc00;
   border: none;
 }
+
+.share-buttons{
+	list-style: none;
+}
+
+.share-buttons li{
+	display: inline;
+}

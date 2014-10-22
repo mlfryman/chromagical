@@ -12,8 +12,17 @@
       h3 {{game.score}} points
   .row
     .col
-      h5.title Share
-        #share.addthis_sharing_toolbox
+      h5.title Share:
+      ul.share-buttons
+        li
+          a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2FABarnhard%2Fchromagic&t=I"m%20chromagical!', target='_blank')
+            img(src='img/social/Facebook-32.png')
+        li
+          a(href='https://twitter.com/intent/tweet?source=https%3A%2F%2Fgithub.com%2FABarnhard%2Fchromagic&text=I"m%20chromagical!:%20https%3A%2F%2Fgithub.com%2FABarnhard%2Fchromagic&via=chromagic', target='_blank', title='Tweet')
+            img(src='img/social/Twitter-32.png')
+        li
+          a(href='https://plus.google.com/share?url=https%3A%2F%2Fgithub.com%2FABarnhard%2Fchromagic', target='_blank', title='Share on Google+')
+            img(src='img/social/Google-32.png')
     .col
       button.button.icon-left.ion-checkmark.button-small.button-positive(ng-click='done()') &nbsp; Done
 
