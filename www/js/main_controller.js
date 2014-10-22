@@ -27,6 +27,7 @@
     });
 
     $scope.gameStart = function(lives, level, score){
+      if(!$scope.deviceReady){return;}
       if(!$scope.game){$scope.game = new Game();}
       $scope.showStart = !$scope.showStart;
       $scope.showGame  = !$scope.showGame;
@@ -35,6 +36,12 @@
 
     $scope.updateBar = function(num){
       $scope.game.bar.changeColor(num);
+    };
+
+    $scope.nextLevel = function(lives, level, score){
+      $scope.showLevel = !$scope.showLevel;
+      $scope.showGame  = !$scope.showGame;
+      $scope.game.start(lives, level, score);
     };
 
     $scope.done = function(){
