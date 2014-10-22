@@ -7,18 +7,21 @@
   </div>
   <div class="row">
     <div class="col">
-      <h3>Level # {{game.currentLevel}}</h3>
+      <h3>Level {{game.currentLevel}}</h3>
     </div>
     <div class="col">
-      <h3># {{game.score}} points</h3>
+      <h3>{{game.score}} points</h3>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <share>buttons</share>
+      <h5 class="title">Share
+        <div id="share" class="addthis_sharing_toolbox"></div>
+      </h5>
     </div>
     <div class="col">
       <button ng-click="done()" class="button icon-left ion-checkmark button-small button-positive">&nbsp; Done</button>
     </div>
   </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5447e4ad416c2d80" async="async"></script>
 </div>
