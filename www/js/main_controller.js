@@ -1,32 +1,19 @@
+/* global Game */
+
 (function(){
   'use strict';
 
   angular.module('chromagic')
   .controller('MainCtrl', ['$scope', '$interval', '$cordovaSocialSharing', function($scope, $interval, $cordovaSocialSharing){
-
-  $cordovaSocialSharing
-    .shareViaTwitter(message, image, link)
-    .then(function(result) {
-      // Success!
-    }, function(err) {
-      // An error occured. Show a message to the user
+    var game  = null;
+    // game = new Game();
+    document.addEventListener('deviceready', function(){
+      game = new Game();
     });
 
-  $cordovaSocialSharing
-    .shareViaWhatsApp(message, image, link)
-    .then(function(result) {
-      // Success!
-    }, function(err) {
-      // An error occured. Show a message to the user
-    });
+    $scope.gameStart = function(){
+      game.start();
+    };
 
-
-  $cordovaSocialSharing
-    .shareViaFacebook(message, image, link)
-    .then(function(result) {
-      // Success!
-    }, function(err) {
-      // An error occured. Show a message to the user
-    });
   }]);
 })();
