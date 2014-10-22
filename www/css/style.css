@@ -4,6 +4,44 @@
   background-color: #000000;
 }
 
+#game {
+  position: relative;
+  text-align: center;
+}
+
+#game > div {
+  display: inline-block;
+  height: 100%;
+}
+
+#game > #control-l {
+  position: absolute;
+  background-color: #000000;
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  padding: 5px;
+}
+
+#game > #control-r {
+  position: absolute;
+  background-color: #000000;
+  right: 0;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  padding: 5px;
+}
+
+#game > #canvasContainer {
+  width: 80%;
+}
+
+button.button {
+  margin: 5px 0;
+  height: 30%;
+}
 .title {
   font-family: 'Wendy One', sans-serif;
 }
@@ -18,61 +56,41 @@ h1, h3 {
 
 .red {
   background-color: #ff0000;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }
 .yellow {
   background-color: #ffff00;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }
 .blue {
   background-color: #0033ff;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }
 .orange {
   background-color: #ff9900;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }
 .purple {
   background-color: #990099;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }
 .green {
   background-color: #009900;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }
 .red-orange {
   background-color: #ff6600;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }
 .yellow-orange {
   background-color: #ffcc00;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }
 .red-purple {
   background-color: #cc0099;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }
 .yellow-green {
   background-color: #66cc00;
-  margin: 0 !important;
-  padding: 0 !important;
   border: none;
 }

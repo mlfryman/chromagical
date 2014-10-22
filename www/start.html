@@ -1,5 +1,5 @@
 
-<div id="start">
+<div id="start" ng-hide="!showStart">
   <div class="row">
     <div class="col">
       <h1 class="title">Chromagic</h1>
@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col col-25"></div>
     <div class="col col-50">
-      <button ng-click="start()" class="button icon-right ion-wand button-balanced">Work your magic!</button>
+      <button ng-click="gameStart(10)" class="button icon-right ion-wand button-balanced">Work your magic!</button>
     </div>
     <div class="col col-25"></div>
   </div>

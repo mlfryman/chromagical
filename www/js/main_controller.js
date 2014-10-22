@@ -4,15 +4,36 @@
   'use strict';
 
   angular.module('chromagic')
-  .controller('MainCtrl', ['$scope', '$interval', '$cordovaSocialSharing', function($scope, $interval, $cordovaSocialSharing){
-    var game  = null;
-    // game = new Game();
+  .controller('MainCtrl', ['$scope', '$interval', function($scope, $interval){
+    $scope.deviceReady = false;
+    $scope.showStart = true;
+    $scope.showGame = false;
+    $scope.showEnd = false;
+    $scope.showLevel = false;
+
     document.addEventListener('deviceready', function(){
-      game = new Game();
+      $scope.deviceReady = true;
     });
 
-    $scope.gameStart = function(){
-      game.start();
+    window.addEventListener('levelup', function(){
+      $scope.showGame  = !$scope.showGame;
+      $scope.showLevel = !$scope.showLevel;
+    });
+
+    window.addEventListener('gameover', function(){
+      $scope.showGame = !$scope.showGame;
+      $scope.showEnd  = !$scope.showEnd;
+    });
+
+    $scope.gameStart = function(lives, level, score){
+      if(!$scope.game){$scope.game = new Game();}
+      $scope.showStart = !$scope.showStart;
+      $scope.showGame  = !$scope.showGame;
+      $scope.game.start(lives, level, score);
+    };
+
+    $scope.updateBar = function(num){
+      $scope.game.bar.changeColor(num);
     };
 
   }]);

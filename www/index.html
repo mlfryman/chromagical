@@ -23,7 +23,7 @@
   <body data-ng-app="chromagic" data-ng-controller="MainCtrl">
     <ion-pane>
       <ion-content>
-        <div id="start">
+        <div id="start" ng-hide="!showStart">
           <div class="row">
             <div class="col">
               <h1 class="title">Chromagic</h1>
@@ -32,31 +32,27 @@
           <div class="row">
             <div class="col col-25"></div>
             <div class="col col-50">
-              <button ng-click="start()" class="button icon-right ion-wand button-balanced">Work your magic!</button>
+              <button ng-click="gameStart(10)" class="button icon-right ion-wand button-balanced">Work your magic!</button>
             </div>
             <div class="col col-25"></div>
           </div>
         </div>
-        <div id="game">
-          <div class="row">
-            <div class="col col-10">
-              <button class="button button-full red"></button>
-              <button class="button button-full purple"></button>
-              <button class="button button-full blue"></button>
-            </div>
-            <div id="canvasContainer" class="col">
-              <canvas id="canvas">
-                <h6>this is the canvas area</h6>
-              </canvas>
-            </div>
-            <div class="col col-10">
-              <button class="button button-full green"></button>
-              <button class="button button-full yellow"></button>
-              <button class="button button-full orange"></button>
-            </div>
+        <div id="game" ng-hide="!showGame">
+          <div id="control-l">
+            <button on-touch="updateBar(5)" on-release="updateBar(-5)" class="button red"></button>
+            <button on-touch="updateBar(16)" on-release="updateBar(-16)" class="button purple"></button>
+            <button on-touch="updateBar(11)" on-release="updateBar(-11)" class="button blue"></button>
+          </div>
+          <div id="canvasContainer">
+            <canvas id="canvas"></canvas>
+          </div>
+          <div id="control-r">
+            <button on-touch="updateBar(18)" on-release="updateBar(-18)" class="button green"></button>
+            <button on-touch="updateBar(7)" on-release="updateBar(-7)" class="button yellow"></button>
+            <button on-touch="updateBar(12)" on-release="updateBar(-12)" class="button orange"></button>
           </div>
         </div>
-        <div id="levelup">
+        <div id="levelup" ng-hide="!showLevel">
           <div class="row">
             <div class="col">
               <h1 class="title">Level # {{game.currentLevel}} Complete!</h1>
@@ -64,7 +60,7 @@
             </div>
           </div>
         </div>
-        <div id="end">
+        <div id="end" ng-hide="!showEnd">
           <div class="row">
             <div class="col">
               <h1 class="title">Game Over!</h1>
