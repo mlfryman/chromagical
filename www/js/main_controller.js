@@ -5,8 +5,6 @@
 
   angular.module('chromagic')
   .controller('MainCtrl', ['$scope', '$interval', function($scope, $interval){
-    var game  = null;
-    // game = new Game();
     $scope.deviceReady = false;
     $scope.showStart = true;
     $scope.showGame = false;
