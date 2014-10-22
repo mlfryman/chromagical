@@ -97,9 +97,11 @@ var Game = (function(){
         this.points += this.levels[this.currentLevel].point;
         this.bloopCount += 1;
         this.bloops.push(new Bloop(this));
+        this.assets.bloop.play();
       }else{
         this.lives -= 1;
         this.splats.push(new Splat(this));
+        this.assets.splat.play();
       }
       this.drops.shift();
     }
