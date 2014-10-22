@@ -25,6 +25,21 @@ var Asset = (function(){
           'img/droplets/blue-green.png'
         ];
 
+    asset.dropClrs = [
+      '#ff0000', // red
+      '#ffff00', // yellow
+      '#0033ff', // blue
+      '#990099', // purple
+      '#ff9900', // orange
+      '#009900', // green
+      '#ffcc00', // yellow-orange
+      '#66cc00', // yellow-green
+      '#ff6600', // red-orange
+      '#cc0099', // red-purple
+      '#660099', // blue-purple
+      '#006600'  // blue-green
+    ];
+
     asset.drops = [];
 
     imgUrls.forEach(function(url){
