@@ -1,5 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Questrial|Wendy+One);
-
+#start {
+  background-color: #000000;
+}
+.fill-up{
+  height: 100px;
+}
 #canvas {
   background-color: #000000;
 }
@@ -44,6 +49,8 @@ button.button {
 }
 .title {
   font-family: 'Wendy One', sans-serif;
+  color: #525151;
+  font-size: 5em;
 }
 
 body {
