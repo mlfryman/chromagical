@@ -92,6 +92,8 @@ var Game = (function(){
     if(!this.drops[0]){return;}
 
     if(this.drops[0].hitBar(this)){
+      console.log('drop color:', this.drops[0].color, 'bar color:', this.bar.color);
+      console.log('colors Matched', this.drops[0].color === this.bar.color);
       if(this.drops[0].color === this.bar.color){
         this.points += this.levels[this.currentLevel].point;
         this.bloopCount += 1;
