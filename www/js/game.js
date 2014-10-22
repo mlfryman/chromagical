@@ -92,6 +92,8 @@ var Game = (function(){
   };
 
   Game.prototype.updateGame = function(){
+    if(!this.drops[0]){return;}
+
     if(this.drops[0].hitBar(this)){
       if('drop color' === 'line color'){
         this.points += this.levels[this.currentLevel].point;

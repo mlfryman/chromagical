@@ -16,10 +16,11 @@ var Drop = (function(){
 
   Drop.prototype.draw = function(game){
     game.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
+    this.y += game.levels[game.currentLevel].gravity;
   };
 
   Drop.prototype.hitBar = function(game){
-    return this.y >= game.bar.y;
+    return (this.y + this.height) >= game.bar.y;
   };
 
   return Drop;

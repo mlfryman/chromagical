@@ -11,18 +11,18 @@ var Asset = (function(){
     var asset    = {},
         img      = null,
         imgUrls  = [
-          'img/red.png',
-          'img/yellow.png',
-          'img/blue.png',
-          'img/purple.png',
-          'img/orange.png',
-          'img/green.png',
-          'img/yellow-orange.png',
-          'img/yellow-green.png',
-          'img/red-orange.png',
-          'img/red-purple.png',
-          'img/blue-purple.png',
-          'img/blue-green.png'
+          'img/droplets/red.png',
+          'img/droplets/yellow.png',
+          'img/droplets/blue.png',
+          'img/droplets/purple.png',
+          'img/droplets/orange.png',
+          'img/droplets/green.png',
+          'img/droplets/yellow-orange.png',
+          'img/droplets/yellow-green.png',
+          'img/droplets/red-orange.png',
+          'img/droplets/red-purple.png',
+          'img/droplets/blue-purple.png',
+          'img/droplets/blue-green.png'
         ];
 
     asset.drops = [];
@@ -33,10 +33,9 @@ var Asset = (function(){
       asset.drops.push(img);
     });
 
-    asset.bloop  = new Media();
-    asset.bloop.src  = 'audio/bloop.mp3';
-
-    asset.splat = new Media();
+    asset.bloop     = new Media();
+    asset.bloop.src = 'audio/bloop.mp3';
+    asset.splat     = new Media();
     asset.splat.src = 'audio/splat.mp3';
 
     return asset;
