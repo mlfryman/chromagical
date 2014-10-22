@@ -27,6 +27,7 @@
     });
 
     $scope.gameStart = function(lives, level, score){
+      if(!$scope.deviceReady){return;}
       if(!$scope.game){$scope.game = new Game();}
       $scope.showStart = !$scope.showStart;
       $scope.showGame  = !$scope.showGame;
