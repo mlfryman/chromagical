@@ -12,6 +12,7 @@
     $scope.showLevel = false;
 
     document.addEventListener('deviceready', function(){
+      screen.lockOrientation('landscape');
       $scope.deviceReady = true;
     });
 
