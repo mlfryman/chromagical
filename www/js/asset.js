@@ -1,5 +1,5 @@
 /* exported Asset */
-/* global Media */
+/* global Media, device */
 
 var Asset = (function(){
   'use strict';
@@ -47,11 +47,11 @@ var Asset = (function(){
       img.src = url;
       asset.drops.push(img);
     });
-
+    var prefix = device.platform === 'Android' ? '/android_asset/www/' : '';
     asset.bloop     = new Media();
-    asset.bloop.src = 'audio/bloop.mp3';
+    asset.bloop.src = prefix + 'audio/bloop.mp3';
     asset.splat     = new Media();
-    asset.splat.src = 'audio/splat.mp3';
+    asset.splat.src = prefix + 'audio/splat.mp3';
 
     return asset;
   };
