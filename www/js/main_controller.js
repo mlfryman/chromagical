@@ -12,7 +12,10 @@
     $scope.showLevel = false;
 
     document.addEventListener('deviceready', function(){
-      screen.lockOrientation('landscape');
+      screen.lockOrientation('landscape', function(){
+        $scope.width = window.screen.width;
+        $scope.height = window.screen.height;
+      });
       $scope.deviceReady = true;
     });
 
@@ -49,7 +52,6 @@
       $scope.showEnd  = !$scope.showEnd;
     };
 
-    $scope.width = window.innerWidth;
-    $scope.height = window.innerHeight;
+
   }]);
 })();

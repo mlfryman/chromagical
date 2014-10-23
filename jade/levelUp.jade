@@ -5,5 +5,5 @@
     .col
       h1.title Level # {{game.currentLevel}} Complete!
       //- insert trophy badge here
-      h1#trophy.i.icon.ion-trophy
+      img(src='img/trophy_200x200.png', alt='trophy')#trophy
       button.button.icon-right.ion-play.button-large.button-balanced(ng-click='nextLevel(10, 1, game.score)') Continue &nbsp;
