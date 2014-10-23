@@ -1,9 +1,7 @@
-//- NOTE: hide/show references are commented out until we integrate those functions
 #levelup(ng-hide='!showLevel')
-  //- .ng-hide(ng-show='levelUp')
   .row
     .col.col25
       img#trophy(src='img/trophy_200x200.png', alt='trophy')
     .col.col75
-      h1.subtitle Level # {{game.currentLevel}} Complete!
+      h1.subtitle Level {{game.currentLevel}} Complete!
       button.button.icon-right.ion-play.button-large.button-balanced.button-block(ng-click='nextLevel(10, 1, game.score)') Continue &nbsp;
