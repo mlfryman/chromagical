@@ -20,8 +20,8 @@ var Game = (function(){
     this.bloopCount    = 0;
     this.currentLevel  = 0;
     this.levels        = {
-      0: {gravity:5,  frequency: 3000, range: 2,  point: 10},
-      1: {gravity:10, frequency: 2500, range: 5,  point: 15},
+      0: {gravity:5,  frequency: 2500, range: 2,  point: 10},
+      1: {gravity:7, frequency: 2500, range: 5,  point: 15},
       2: {gravity:15, frequency: 2000, range: 5,  point: 15},
       3: {gravity:20, frequency: 1500, range: 11, point: 20}
     };

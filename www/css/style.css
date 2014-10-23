@@ -1,5 +1,41 @@
 @import url(http://fonts.googleapis.com/css?family=Questrial|Wendy+One);
+.pane {
+  background-color: #000000;
+}
+#start {
+  background-color: #000000;
+}
+.lead {
+  font-weight: lighter;
+  color: #737373;
+  font-size: 28px;
+  padding-top: 25px;
+}
+.center {
+  text-align: center;
+}
+#start-btn{
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  -webkit-animation: hue 3000ms infinite linear;
+  -moz-animation: hue 3000ms infinite linear;
+  animation: hue 3000ms infinite linear;
+  font-weight: bold;
+  border: none;
+}
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
 
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+#trophy{
+  margin: 50px;
+  display: block;
+}
 #canvas {
   background-color: #000000;
 }
@@ -16,26 +52,26 @@
 
 #game > #control-l {
   position: absolute;
-  background-color: #000000;
+  background-color: #242424;
   left: 0;
   top: 0;
-  width: 10%;
+  width: 15%;
   height: 100%;
   padding: 5px;
 }
 
 #game > #control-r {
   position: absolute;
-  background-color: #000000;
+  background-color: #242424;
   right: 0;
   top: 0;
-  width: 10%;
+  width: 15%;
   height: 100%;
   padding: 5px;
 }
 
 #game > #canvasContainer {
-  width: 80%;
+  width: 70%;
 }
 
 button.button {
@@ -44,6 +80,13 @@ button.button {
 }
 .title {
   font-family: 'Wendy One', sans-serif;
+  color: #525151;
+  font-size: 5em;
+}
+.subtitle {
+  font-family: 'Wendy One', sans-serif;
+  color: #525151;
+  font-size: 3em;
 }
 
 body {
@@ -55,27 +98,27 @@ h1, h3 {
 }
 
 .red {
-  background-color: #ff0000;
+  background-color: #ff0000 !important;
   border: none;
 }
 .yellow {
-  background-color: #ffff00;
+  background-color: #ffff00 !important;
   border: none;
 }
 .blue {
-  background-color: #0033ff;
+  background-color: #0033ff !important;
   border: none;
 }
 .orange {
-  background-color: #ff9900;
+  background-color: #ff9900 !important;
   border: none;
 }
 .purple {
-  background-color: #990099;
+  background-color: #990099 !important;
   border: none;
 }
 .green {
-  background-color: #009900;
+  background-color: #009900 !important;
   border: none;
 }
 .red-orange {

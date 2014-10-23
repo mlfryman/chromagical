@@ -1,15 +1,15 @@
 
-<div id="start" ng-hide="!showStart">
+<div id="start" ng-hide="!showStart" style="width:{{width}}px; height:{{height}}px;">
   <div class="row">
     <div class="col">
       <h1 class="title">Chromagic</h1>
     </div>
   </div>
   <div class="row">
-    <div class="col col-25"></div>
-    <div class="col col-50">
-      <button ng-click="gameStart(10)" class="button icon-right ion-wand button-balanced">Work your magic!</button>
+    <div class="col">
+      <button id="start-btn" ng-click="gameStart(10)" class="button icon-right ion-wand button-balanced button-block">Work your magic!</button>
+      <p class="lead center">Can you match the colors as they fall down?</p>
+      <h5 class="subtitle slide-in-up center">Flex Your Hue Muscles!</h5>
     </div>
-    <div class="col col-25"></div>
   </div>
 </div>

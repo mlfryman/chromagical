@@ -5,7 +5,7 @@ var Bar = (function(){
 
   function Bar(game){
     this.x        = 0;
-    this.y        = Math.ceil(game.canvas.height * 0.8);
+    this.y        = Math.ceil(game.canvas.height * 0.7);
     this.width    = game.canvas.width;
     this.height   = Math.floor(game.canvas.height * 0.1);
     this.palette  = game.palette;
