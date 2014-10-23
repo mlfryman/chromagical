@@ -37,6 +37,7 @@
     $scope.gameStart = function(lives, level, score){
       if(!$scope.deviceReady){return;}
       if(!$scope.game){$scope.game = new Game();}
+      $scope.game.assets.magic.play();
       $scope.showStart = !$scope.showStart;
       $scope.showGame  = !$scope.showGame;
       $scope.game.start(lives, level, score);

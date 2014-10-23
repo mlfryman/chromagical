@@ -52,6 +52,8 @@ var Asset = (function(){
     asset.bloop.src = prefix + 'audio/bloop.mp3';
     asset.splat     = new Media();
     asset.splat.src = prefix + 'audio/splat.mp3';
+    asset.magic     = new Media();
+    asset.magic.src = prefix + 'audio/magic.mp3';
 
     return asset;
   };
