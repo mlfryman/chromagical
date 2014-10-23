@@ -3,7 +3,7 @@
   //- .ng-hide(ng-show='levelUp')
   .row
     .col.col25
-      img(src='img/trophy_200x200.png', alt='trophy')#trophy
+      img#trophy(src='img/trophy_200x200.png', alt='trophy')
     .col.col75
       h1.subtitle Level # {{game.currentLevel}} Complete!
-      button.button.icon-right.ion-play.button-large.button-balanced(ng-click='nextLevel(10, 1, game.score)') Continue &nbsp;
+      button.button.icon-right.ion-play.button-large.button-balanced.button-block(ng-click='nextLevel(10, 1, game.score)') Continue &nbsp;

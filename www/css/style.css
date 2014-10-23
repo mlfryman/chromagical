@@ -5,7 +5,10 @@
 #start {
   background-color: #000000;
 }
-
+#trophy{
+  margin: 50px;
+  display: block;
+}
 #canvas {
   background-color: #000000;
 }

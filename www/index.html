@@ -51,10 +51,10 @@
         </div>
         <div id="levelup" ng-hide="!showLevel">
           <div class="row">
-            <div class="col col25"><img src="img/trophy_200x200.png" alt="trophy" id="trophy"></div>
+            <div class="col col25"><img id="trophy" src="img/trophy_200x200.png" alt="trophy"></div>
             <div class="col col75">
               <h1 class="subtitle">Level # {{game.currentLevel}} Complete!</h1>
-              <button ng-click="nextLevel(10, 1, game.score)" class="button icon-right ion-play button-large button-balanced">Continue &nbsp;</button>
+              <button ng-click="nextLevel(10, 1, game.score)" class="button icon-right ion-play button-large button-balanced button-block">Continue &nbsp;</button>
             </div>
           </div>
         </div>
