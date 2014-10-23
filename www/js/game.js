@@ -64,11 +64,11 @@ var Game = (function(){
     this.levelUp = this.updateLevel();
 
     if(this.isOver){
-      this.cancelDropTimer();
       window.dispatchEvent(new Event('gameover'));
-    }else if(this.levelUp){
       this.cancelDropTimer();
+    }else if(this.levelUp){
       window.dispatchEvent(new Event('levelup'));
+      this.cancelDropTimer();
     }else{
       window.requestAnimationFrame(this.paint.bind(this));
     }
