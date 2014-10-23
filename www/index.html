@@ -55,7 +55,7 @@
           <div class="row">
             <div class="col col25"><img id="trophy" src="img/trophy_200x200.png" alt="trophy"></div>
             <div class="col col75">
-              <h1 class="subtitle">Level {{game.currentLevel}} Complete!</h1>
+              <h1 class="subtitle">Level {{game.currentLevel + 1}} Complete!</h1>
               <button ng-click="nextLevel(10, 1, game.score)" class="button icon-right ion-play button-large button-balanced button-block">Continue &nbsp;</button>
             </div>
           </div>
@@ -68,7 +68,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <h1 class="subtitle">Level {{game.currentLevel}}</h1>
+              <h1 class="subtitle">Level {{game.currentLevel + 1}}</h1>
             </div>
             <div class="col">
               <h1 class="subtitle">{{game.score}} points</h1>
