@@ -2,8 +2,8 @@
 #levelup(ng-hide='!showLevel')
   //- .ng-hide(ng-show='levelUp')
   .row
-    .col
-      h1.title Level # {{game.currentLevel}} Complete!
-      //- insert trophy badge here
+    .col.col25
       img(src='img/trophy_200x200.png', alt='trophy')#trophy
+    .col.col75
+      h1.subtitle Level # {{game.currentLevel}} Complete!
       button.button.icon-right.ion-play.button-large.button-balanced(ng-click='nextLevel(10, 1, game.score)') Continue &nbsp;

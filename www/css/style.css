@@ -53,6 +53,11 @@ button.button {
   color: #525151;
   font-size: 5em;
 }
+.subtitle {
+  font-family: 'Wendy One', sans-serif;
+  color: #525151;
+  font-size: 3em;
+}
 
 body {
   font-family: 'Questrial', sans-serif;

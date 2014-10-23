@@ -6,9 +6,9 @@ For example, you might change some of the default colors:
 
 $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
-$positive:                        #4a87ee !default;
+
 $calm:                            #43cee6 !default;
-$balanced:                        #66cc33 !default;
+
 $energized:                       #f0b840 !default;
 $assertive:                       #ef4e3a !default;
 $royal:                           #8a6de9 !default;
@@ -20,6 +20,8 @@ $dark:                            #444 !default;
   https://twitter.com/benjsperry  https://twitter.com/ionicframework
   MIT License: https://github.com/driftyco/ionicons
 */
+$positive:                        #ff9900;
+$balanced:                        #66cc00;
 @font-face {
   font-family: "Ionicons";
   src: url("../lib/ionic/fonts/ionicons.eot?v=1.5.2");
