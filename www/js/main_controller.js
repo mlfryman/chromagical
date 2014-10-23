@@ -22,11 +22,16 @@
     window.addEventListener('levelup', function(){
       $scope.showGame  = !$scope.showGame;
       $scope.showLevel = !$scope.showLevel;
+      $scope.$digest();
+      $scope.game.cancelDropTimer();
     });
 
     window.addEventListener('gameover', function(){
+      $scope.game.cancelDropTimer();
       $scope.showGame = !$scope.showGame;
       $scope.showEnd  = !$scope.showEnd;
+      $scope.$digest();
+      $scope.game.cancelDropTimer();
     });
 
     $scope.gameStart = function(lives, level, score){

@@ -65,10 +65,8 @@ var Game = (function(){
 
     if(this.isOver){
       window.dispatchEvent(new Event('gameover'));
-      this.cancelDropTimer();
     }else if(this.levelUp){
       window.dispatchEvent(new Event('levelup'));
-      this.cancelDropTimer();
     }else{
       window.requestAnimationFrame(this.paint.bind(this));
     }
