@@ -2,6 +2,7 @@
 ===================
 
 ### Screenshots
+- forthcoming
 
 ### Description
 A Color Matching Game
@@ -17,4 +18,4 @@ A Color Matching Game
 - [Juan Rodriguez](https://github.com/jjsub)
 
 ### License
-[MIT](LICENSE)
+- [MIT](LICENSE)
