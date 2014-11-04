@@ -1,7 +1,7 @@
 {
-  "name": "chromagic",
+  "name": "chromagical",
   "version": "1.0.0",
-  "description": "chromagic: An Ionic project",
+  "description": "Chromagical: A Color Matching Game",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-concat": "^2.2.0",
