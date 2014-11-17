@@ -2,6 +2,20 @@
   "name": "gp-chromagical",
   "version": "1.0.0",
   "description": "Chromagical: A Color Matching Game",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlfryman/gp-chromagical"
+  },
+  "authors": [
+    "Adam Barnhard <https://github.com/abarnhard>",
+    "Melanie L. Fryman <https://github.com/mlfryman>",
+    "Kayla Jones <https://github.com/kaylalynjones>",
+    "Juan Rodriguez <https://github.com/jjsub>"
+  ],
+  "bugs": {
+    "url": "https://github.com/mlfryman/gp-chromagical/issues"
+  },
+  "homepage": "https://github.com/mlfryman/gp-chromagical",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-concat": "^2.2.0",
