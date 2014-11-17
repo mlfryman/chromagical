@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  angular.module('chromagic', ['ionic', 'ngTouch'])
+  angular.module('chromagical', ['ionic', 'ngTouch'])
   .run(function($ionicPlatform){
     $ionicPlatform.ready(function(){
       if(window.cordova && window.cordova.plugins.Keyboard){

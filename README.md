@@ -1,4 +1,4 @@
-## Chromagical
+Chromagical
 ===================
 
 ### Screenshots

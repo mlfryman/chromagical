@@ -3,7 +3,7 @@
 (function(){
   'use strict';
 
-  angular.module('chromagic')
+  angular.module('chromagical')
   .controller('MainCtrl', ['$scope', '$interval', function($scope, $interval){
     $scope.deviceReady = false;
     $scope.showStart = true;
@@ -57,7 +57,5 @@
       $scope.showStart = !$scope.showStart;
       $scope.showEnd  = !$scope.showEnd;
     };
-
-
   }]);
 })();
